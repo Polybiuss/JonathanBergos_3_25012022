@@ -5,15 +5,13 @@
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Shrikhand&display=swap" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
-    crossorigin="anonymous"
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap" rel="stylesheet">
+        <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous"
     />
     </head>
     <body>
@@ -29,23 +27,23 @@
         <section class="bloc__presentation">
             <h1 class="bloc__presentation__title">Réserver le menu qui vous convient</h1>
             <h2 class="bloc__presentation__subtitle">Découvrez des restaurants d'exception sélectionnés par nos soins</h2>
-            <input class="bloc__presentation__btn" type="button" value="Explorer nos restaurants">
+            <input class="bloc__presentation__btn" type="submit" value="Explorer nos restaurants">
         </section>
         <section class="bloc__fonction">
             <h1 class="bloc__fonction__title">Fonctionnement</h1>
             <div class="bloc__fonction__slide">
                 <span class="bloc__fonction__slide__number">1</span>
-                <i class="fas fa-mobile-alt bloc__fonction__slide__logo"></i>
+                <i class="fas fa-mobile-alt bloc__fonction__slide__logo bloc__fonction__slide__logo__phone"></i>
                 <h3 class="bloc__fonction__slide__title">Choisissez un restaurant</h3>
             </div>
             <div class="bloc__fonction__slide">
                 <span class="bloc__fonction__slide__number">2</span>
-                <i class="fas fa-list-ul bloc__fonction__slide__logo"></i>
+                <i class="fas fa-list-ul bloc__fonction__slide__logo bloc__fonction__slide__logo__list"></i>
                 <h3 class="bloc__fonction__slide__title">Composez votre menu</h3>
             </div>
             <div class="bloc__fonction__slide">
                 <span class="bloc__fonction__slide__number">3</span>
-                <i class="fas fa-store bloc__fonction__slide__logo"></i>
+                <i class="fas fa-store bloc__fonction__slide__logo bloc__fonction__slide__logo__market"></i>
                 <h3 class="bloc__fonction__slide__title">Dégustez au restaurant</h3>
             </div>
         </section>
@@ -60,7 +58,11 @@
                             <p>Ménilmontant</p>
                     </div>
                 </a>
-                <i class="far fa-heart bloc__restaurants__cards__description__heart"></i>
+                <div class="bloc__restaurants__cards__checkbox">
+                    <input type="checkbox">
+                <i class="far fa-heart bloc__restaurants__cards__heart"></i>
+                <i class="fas fa-heart bloc__restaurants__cards__heart bloc__restaurants__cards__heart__animate" id="like"></i>
+            </div>
             </div>
             <div class="bloc__restaurants__cards">
                 <a href="pages/lanoteenchantee.html" class="bloc__restaurants__cards__link">
@@ -71,7 +73,11 @@
                             <p>Charonne</p>
                     </div>
                 </a>
-                <i class="far fa-heart bloc__restaurants__cards__description__heart"></i>
+                <div class="bloc__restaurants__cards__checkbox">
+                    <input type="checkbox">
+                <i class="far fa-heart bloc__restaurants__cards__heart"></i>
+                <i class="fas fa-heart bloc__restaurants__cards__heart bloc__restaurants__cards__heart__animate" id="like"></i>
+            </div>
             </div>
             <div class="bloc__restaurants__cards">
                 <a href="pages/alafrancaise.html" class="bloc__restaurants__cards__link">
@@ -81,7 +87,11 @@
                             <p>Cité rouge</p>
                     </div>
                 </a>
-                <i class="far fa-heart bloc__restaurants__cards__description__heart"></i>
+                <div class="bloc__restaurants__cards__checkbox">
+                    <input type="checkbox">
+                <i class="far fa-heart bloc__restaurants__cards__heart"></i>
+                <i class="fas fa-heart bloc__restaurants__cards__heart bloc__restaurants__cards__heart__animate" id="like"></i>
+            </div>
             </div>
             <div class="bloc__restaurants__cards">
                 <a href="pages/ledelicedessens.html" class="bloc__restaurants__cards__link">
@@ -91,7 +101,11 @@
                             <p>Folie-Méricourt</p>
                     </div>
                 </a>
-                <i class="far fa-heart bloc__restaurants__cards__description__heart"></i>
+                <div class="bloc__restaurants__cards__checkbox">
+                    <input type="checkbox">
+                <i class="far fa-heart bloc__restaurants__cards__heart"></i>
+                <i class="fas fa-heart bloc__restaurants__cards__heart bloc__restaurants__cards__heart__animate" id="like"></i>
+            </div>
             </div>
         </section>
         <footer>
