@@ -3,6 +3,7 @@
     <head>
         <title>OhMyFood</title>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +16,9 @@
     />
     </head>
     <body>
+        <div class="loadcontent">
+            <div class="loading"></div>
+        </div>
         <header>
             <h1>ohmyfood</h1>
         </header>
@@ -27,7 +31,7 @@
         <section class="bloc__presentation">
             <h1 class="bloc__presentation__title">Réserver le menu qui vous convient</h1>
             <h2 class="bloc__presentation__subtitle">Découvrez des restaurants d'exception sélectionnés par nos soins</h2>
-            <input class="bloc__presentation__btn" type="submit" value="Explorer nos restaurants">
+            <input class="bloc__presentation__btn" type="button" value="Explorer nos restaurants">
         </section>
         <section class="bloc__fonction">
             <h1 class="bloc__fonction__title">Fonctionnement</h1>
@@ -111,10 +115,10 @@
         <footer>
             <h3>ohmyfood</h3>
             <ul>
-                <li class="bold"><i class="fas fa-utensils marg-right"></i> Proposer un restaurant</li>
-                <li class="bold"><i class="fas fa-hands-helping marg-right1"></i> Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+                <li class="bold"><a href="#"><i class="fas fa-utensils marg-right"></i> Proposer un restaurant</a></li>
+                <li class="bold"><a href="#"><i class="fas fa-hands-helping marg-right1"></i> Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </footer>
     </body>

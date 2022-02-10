@@ -1,19 +1,10 @@
 @import './utils/variables';
+@import './utils/keyframes';
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@keyframes scale-up-ver-bottom {
-    0% {
-      transform: scale(0);
-      transform-origin: 50% 50%;
-    }
-    100% {
-      transform: scale(1);
-      transform-origin: 50% 50%;
-    }
-  }
 header{
     text-align: center;
     font-family: 'Shrikhand', cursive;
@@ -232,6 +223,10 @@ footer{
     }
     & li{
         padding: 5px 0;
+        & a{
+            text-decoration: none;
+            color: inherit;
+        }
     }
     & .marg-right{
         margin-right: 10px;
@@ -326,25 +321,85 @@ main{
     }
     &__choice{
         padding: 20px;
+        & .animation-menu-1{
+            animation: appear 1s 500ms both;
+        }
+        & .animation-menu-2{
+            animation: appear 1s 750ms both;
+        }
+        & .animation-menu-3{
+            animation: appear 1s 1000ms both;
+        }
+        & .animation-menu-4{
+            animation: appear 1s 1250ms both;
+        }
         &__slide{
+            overflow: hidden;
+            width: 375px;
+            max-width: 100%;
+            position: relative;
             background-color: white;
-            padding: 15px 10px;
             border-radius: 10px;
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            margin: 20px auto;
             box-shadow: 0px 0px 10px 4px rgba(211, 211, 211, 0.67);
-            &__title{
-                & h3{
-                    margin-bottom: 10px;
-                }
-                & p{
-                    font-weight: lighter;
-                }
+            & input[type="radio"]{
+                appearance: none;
+                width: 100%;
+                position: absolute;
+                cursor: pointer;
+                height: 100%;
+                top: 0;
+                left: 0;
             }
-            &__price{
-                align-self: flex-end;
-                padding-right: 10px;
+            &__contenair{
+                display: flex;
+                overflow: hidden;
+                width: 100%;
+                &__description{
+                    overflow: hidden;
+                    width: 100%;
+                    padding: 10px 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    &__title{
+                        overflow: hidden;
+                        & h3{
+                            margin-bottom: 10px;
+                        }
+                        & p{
+                            font-weight: lighter;
+                        }
+                        & > *{
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            max-width: 100%;
+                        }
+                    }
+                    &__price{
+                        align-self: flex-end;
+                        padding-right: 10px;
+                    }
+                }
+                &__validate{
+                    width: 7rem;
+                    background: #99e2d0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: -7rem;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease;
+                    border-radius: 0 10px 10px 0;
+                    & > i{
+                        color: #99e2d0;
+                        padding: 0.5rem;
+                        border-radius: 50%;
+                        background: white;
+                        transition-duration: 0.5s;
+                    }
+                }
             }
         }
     }
@@ -364,6 +419,10 @@ main{
         box-shadow: 0px 0px 10px 4px rgba(211, 211, 211, 0.67);
     }
 }
+input[type="button"]:hover{
+    background: linear-gradient( lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
+    box-shadow: 0px 0px 10px 8px rgba(211, 211, 211, 0.67);
+}
 input:checked ~ .far {
     transition-duration: 0.5s;
     opacity: 0;
@@ -373,3 +432,39 @@ input:checked ~ .far {
     transition-duration: 0.5s;
     opacity: 1;
   }
+  input:checked ~ .menu__choice__slide__contenair .menu__choice__slide__contenair__validate{
+    margin-right: 0;
+       transition-duration: 0.5s;
+       transition-timing-function: ease;
+  }
+  
+  input:checked ~ .menu__choice__slide__contenair i{
+    margin-right: 0;
+       transition-duration: 0.5s;
+       transition-timing-function: ease;
+    transform: rotate(360deg);
+  }
+  .loadcontent
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF80;
+    animation: loadinger 0.1s;
+    animation-delay: 2.9s;
+    animation-fill-mode: both;
+}
+
+.loading
+{
+    border: 5px solid #9356DC;
+    border-top: 5px solid #99E2D0;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: loading 1s ease-in-out;
+    animation-iteration-count: 3;
+}
