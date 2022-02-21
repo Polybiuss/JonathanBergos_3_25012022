@@ -66,6 +66,7 @@ nav form input {
   font-size: 18px;
   width: 150px;
   margin-left: 10px;
+  padding: 5px;
 }
 nav form input::placeholder {
   color: black;
@@ -76,6 +77,7 @@ nav form input::placeholder {
   background-color: #f3f3f3;
   font-family: "Roboto", cursive;
   margin-bottom: 40px;
+  padding-bottom: 50px;
 }
 .bloc__presentation__title {
   padding-top: 30px;
@@ -88,17 +90,24 @@ nav form input::placeholder {
   color: #4d4d4d;
   width: 75%;
   margin: auto;
+  padding-bottom: 20px;
 }
 .bloc__presentation__btn {
+  width: 250px;
+  margin: auto;
+  display: block;
   background: linear-gradient(#FF79DA, #9356DC);
   padding: 20px;
   color: white;
   border: none;
   border-radius: 35px;
   font-size: 18px;
-  margin-top: 20px;
-  margin-bottom: 50px;
   box-shadow: 0px 0px 10px 4px rgba(211, 211, 211, 0.67);
+  text-decoration: none;
+}
+.bloc__presentation__btn:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 0px 10px 8px rgba(211, 211, 211, 0.67);
 }
 
 .bloc__fonction {
@@ -447,13 +456,15 @@ main {
   background: white;
   transition-duration: 0.5s;
 }
-
-.button__main {
+.menu__button__main {
   width: 100%;
   text-align: center;
 }
-.button__main input {
-  width: 43%;
+.menu__button__main__link {
+  display: block;
+  margin: auto;
+  width: 250px;
+  text-decoration: none;
   border: none;
   font-size: 22px;
   color: white;
@@ -462,8 +473,7 @@ main {
   padding: 15px;
   box-shadow: 0px 0px 10px 4px rgba(211, 211, 211, 0.67);
 }
-
-input[type=button]:hover {
+.menu__button__main__link:hover {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0px 0px 10px 8px rgba(211, 211, 211, 0.67);
 }
