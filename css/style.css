@@ -456,7 +456,9 @@ main {
   background: white;
   transition-duration: 0.5s;
 }
+
 .menu__button__main {
+  font-family: "Roboto", cursive;
   width: 100%;
   text-align: center;
 }

@@ -412,28 +412,30 @@ main{
             }
         }
     }
-    &__button__main{
-        width: 100%;
-        text-align: center;
-        &__link{
-            display: block;
-            margin: auto;
-            width: 250px;
-            text-decoration: none;
-            border: none;
-            font-size: 22px;
-            color: white;
-            background: linear-gradient($colour-secondary, $colour-primary);
-            border-radius: 35px;
-            padding: 15px;
-            box-shadow: 0px 0px 10px 4px rgba(211, 211, 211, 0.67);
-            &:hover{
-                background: linear-gradient( lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
-                box-shadow: 0px 0px 10px 8px rgba(211, 211, 211, 0.67);
-            }
+}
+.menu__button__main{
+    font-family: 'Roboto', cursive;
+    width: 100%;
+    text-align: center;
+    &__link{
+        display: block;
+        margin: auto;
+        width: 250px;
+        text-decoration: none;
+        border: none;
+        font-size: 22px;
+        color: white;
+        background: linear-gradient($colour-secondary, $colour-primary);
+        border-radius: 35px;
+        padding: 15px;
+        box-shadow: 0px 0px 10px 4px rgba(211, 211, 211, 0.67);
+        &:hover{
+            background: linear-gradient( lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
+            box-shadow: 0px 0px 10px 8px rgba(211, 211, 211, 0.67);
         }
     }
 }
+
 input:checked ~ .far {
     transition-duration: 0.5s;
     opacity: 0;
